@@ -1,0 +1,44 @@
+<assembly>
+	<id>release</id>
+	<formats>
+		<format>tar.gz</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<fileSets>
+		<!-- for autoconf config from minas -->
+		<fileSet>
+			<directory>META-INF</directory>
+			<outputDirectory>META-INF</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>bin</directory>
+			<outputDirectory>bin</outputDirectory>
+			<fileMode>0755</fileMode>
+		</fileSet>
+		<fileSet>
+			<directory>conf</directory>
+			<outputDirectory>conf</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>logs</directory>
+			<outputDirectory>logs</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>tmp</directory>
+			<outputDirectory>tmp</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>src/main/resources</directory>
+			<outputDirectory>.</outputDirectory>
+		</fileSet>
+	</fileSets>
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>lib</outputDirectory>
+			<!--
+				如果不希望 deploy 项目打出的jar也包含到 lib 目录可以添加下面这行配置，它默认为 true
+				<useProjectArtifact>false</useProjectArtifact>
+			-->
+		</dependencySet>
+	</dependencySets>
+</assembly>

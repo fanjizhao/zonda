@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="src" path="src/test/java"/>
+	<classpathentry kind="src" path="src/test/resources"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Administrator/.m2/repository/com/alibaba/platform/zonda/logger/zonda-logger-lib/0.1.0-SNAPSHOT/zonda-logger-lib-0.1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Administrator/.m2/repository/com/alibaba/platform/zonda/config/zonda-config-lib/0.1.0-SNAPSHOT/zonda-config-lib-0.1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Administrator/.m2/repository/org/zeromq/jzmq/1.0.0/jzmq-1.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Administrator/.m2/repository/com/alibaba/external/apache.thrift/0.8.0/apache.thrift-0.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Administrator/.m2/repository/org/slf4j/slf4j-api/1.5.6/slf4j-api-1.5.6.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Administrator/.m2/repository/com/alibaba/external/org.javolution/5.5.1/org.javolution-5.5.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

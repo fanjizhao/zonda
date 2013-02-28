@@ -1,0 +1,1 @@
+java -jar ../lib/target/zonda-logger-server-0.1.0.jar aggregator

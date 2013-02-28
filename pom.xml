@@ -1,0 +1,142 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.alibaba.platform.zonda</groupId>
+	<artifactId>zonda</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0.0-SNAPSHOT</version>
+	<modules>
+		<module>./common.java/consts_java</module>
+		<module>./log/jar</module>
+		<module>./oam/java/CodeGeneration</module>
+		<module>./deploy/ZKInit</module>
+
+		<module>./def/java_def</module>
+		<module>./common.java/rpc_java</module>
+		<module>./oam/java/CounterLib</module>
+		<module>./oam/java/Alarm</module>
+
+		<module>./log/server</module>
+
+		<module>./common.java/filesystem_api_java</module>
+		<module>./common.java/filesystem_java</module>
+		<module>./corebiz/zondaClient/java/zonda-client</module>
+		<module>./corebiz/zondaClient/java/zonda-client-api</module>
+
+		<module>./metadata/meta-client-api</module>
+		<module>./metadata/metadata-common</module>
+		<module>./metadata/metadata-client</module>
+		<module>./metadata/metadata-server</module>
+		<module>./scheduler/common/jobsched-common</module>
+		<module>./scheduler/server/jobsched-server</module>
+		<module>./scheduler/server/jobsched-executor</module>
+	</modules>
+
+	<repositories>
+		<repository>
+			<id>a2m-china-central</id>
+			<name>a2m china mirror central</name>
+			<url>http://repo.alibaba-inc.com:9091/china</url>
+		</repository>
+		<repository>
+			<id>a2m-intl-central</id>
+			<name>a2m intl mirror central</name>
+			<url>http://repo.alibaba-inc.com:9091/intl</url>
+		</repository>
+		<repository>
+			<id>a2m-crm-central</id>
+			<name>a2m crm mirror central</name>
+			<url>http://repo.alibaba-inc.com:9091/crm</url>
+		</repository>
+		<repository>
+			<id>a2m-itbu-central</id>
+			<name>a2m itbu mirror central</name>
+			<url>http://repo.alibaba-inc.com:9091/itbu</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+		<repository>
+			<id>itbu-releases</id>
+			<name>itbu releases</name>
+			<url>http://repo.alibaba-inc.com/mvn/private/itbu/releases/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+		<repository>
+			<id>itbu-snapshots</id>
+			<name>itbu snapshots</name>
+			<url>http://repo.alibaba-inc.com/mvn/private/itbu/snapshots/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+		<repository>
+			<id>b2b-central-cache</id>
+			<name>B2B cache server for external repositories</name>
+			<url>http://repo.alibaba-inc.com/mvn/external</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<properties>
+		<java.version>1.6</java.version>
+		<java.encoding>UTF-8</java.encoding>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<finalName>zonda</finalName>
+
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>${java.encoding}</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<configuration>
+							<tasks>
+								<echo message="project home:        ${basedir}" />
+								<echo message="java home:           ${java.home}" />
+								<echo message="java source version: ${java.version}" />
+								<echo message="java target version: ${java.version}" />
+								<echo message="java source charset: ${java.encoding}" />
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+
+</project>
