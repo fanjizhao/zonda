@@ -1,7 +1,7 @@
 zonda
 =====
 
-An RPC framework and some utilities for developing distributed service fast for Java and C++
+An RPC framework and some utilities for developing distributed services fast for Java and C++
 
 Requirements
 ============
